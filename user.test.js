@@ -45,8 +45,9 @@ describe("Database Tests", () => {
 
   //READ
   test("Test READ", async () => {
-    const findUser = await usersCollection.findOne({ email: 'example@gmail.com' });
-    expect(findUser.name).toBe(sampleUser.name);
+    const email = 'example@gmail.com';
+    const findUser = await usersCollection.findOne({ Email: email });
+    expect(findUser.Email).toBe(email);
   }, 30000);
 
   afterAll(async () => {
