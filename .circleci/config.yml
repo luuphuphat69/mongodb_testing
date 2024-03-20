@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/repo
     docker:
-      - image: cimg/node:20.4.0
+      - image: cimg/node:20.5.1
     steps:
       - checkout
       - run:
